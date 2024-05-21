@@ -1,0 +1,46 @@
+﻿{% include "header.html" %}
+{% load static %}   
+  
+
+      <!-- PORTFOLIO SECTION-->
+   <section id="port-sec">
+       <div class="container">
+            <div class="row g-pad-bottom">
+                <div class="text-center g-pad-bottom">
+                   <div class="col-md-12 col-sm-12 alert-info">
+                            <h4><i class="fa fa-desktop fa-2x" ></i>&nbsp;See Destination Gallery</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            
+                    </div>
+                   
+                   
+                   
+                </div>
+                  </div>
+           <div class="row g-pad-bottom" >
+                               <div class="col-md-10 col-md-offset-1 col-sm-12" >
+                    <ul class="portfolio-items col-3">
+                        {% for n in photo %}
+                        <li class="portfolio-item">
+                            <div class="item-main">
+                                <div class="portfolio-image">
+                                    <img src="{{n.img.url}}" alt="">
+                                    <div class="overlay">
+                                        <a class="preview btn btn-danger" title="Mathura tour" href="{% url "package" %}"><i class=" fa fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <h5>{{n.name}}</h5>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+           </div>
+       </div>
+   </section>
+     <!-- END PORTFOLIO SECTION-->
+   
+
+{% include "footer.html" %}

@@ -1,0 +1,50 @@
+{% load static %}
+
+<!--FOOTER SECTION -->
+
+<!--FOOTER SECTION-->
+<footer id="footer-sec">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h4>Contact Us</h4>
+                <p>
+                    Address: Krishna Bhumi, Chhatikara Road, Mathura, Uttar Pradesh, India<br>
+                    Phone: +91 123 456 7890<br>
+                    Email: info@krishnabhumi.com
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'img/facebook.png' %}" alt="Facebook" style="width:32px;height:32px;margin:5px;"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="{% static 'img/twitter.png' %}" alt="Twitter" style="width:32px;height:32px;margin:5px;"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'img/instagram.png' %}" alt="Instagram" style="width:32px;height:32px;margin:5px;"></a>
+            </div>
+            <div class="col-md-4">
+                <h4>Quick Links</h4>
+                <ul style="list-style-type:none;padding:0;">
+                    <li><a href="{% url "homepage" %}">Home</a></li>
+                    <li><a href="{% url "package" %}">Services</a></li>
+                    <li><a href="{% url "contact" %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--END FOOTER SECTION-->
+<!-- END FOOTER SECTION -->
+
+<!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+<!-- CORE JQUERY  -->
+<script src="{% static 'plugins/jquery-1.10.2.js' %}"></script>
+<!-- BOOTSTRAP CORE SCRIPT   -->
+<script src="{% static 'plugins/bootstrap.min.js' %}"></script>  
+ <!-- ISOTOPE SCRIPT   -->
+<script src="{% static 'plugins/jquery.isotope.min.js' %}"></script>
+<!-- PRETTY PHOTO SCRIPT   -->
+<script src="{% static 'plugins/jquery.prettyPhoto.js' %}"></script>    
+<!-- CUSTOM SCRIPTS -->
+<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>

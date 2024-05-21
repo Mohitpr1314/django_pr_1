@@ -1,0 +1,124 @@
+﻿{% include "header.html" %}
+    
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    {% comment %} .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    } {% endcomment %}
+    {% comment %} h1 {
+        text-align: center;
+        color: #333;
+    } {% endcomment %}
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    {% comment %} label {
+        margin-bottom: 5px;
+        color: #555;
+    } {% endcomment %}
+    {% comment %} input, textarea {
+        margin-bottom: 0px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    } {% endcomment %}
+    button {
+        padding: 10px;
+        background-color: #5cb85c;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #4cae4c;
+    }
+</style>
+
+    <!--CONTACT SECTION-->    
+    <section  id="services-sec">
+        <div class="container">
+            <div class="row ">
+                <div class="text-center g-pad-bottom">
+                   <div class="col-md-4 col-sm-4 alert-info">
+                            <h4><i class="fa fa-laptop fa-2x" ></i>&nbsp;Our Location </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            
+                    </div>
+                    <div class="col-md-4 col-sm-4 alert-success">
+                            <h4><i class="fa fa-microphone fa-2x" ></i>&nbsp;Our Values</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            
+                    </div>
+                   
+                    <div class="col-md-4 col-sm-4 alert-danger">
+                            <h4><i class="fa fa-pencil fa-2x" ></i>&nbsp; Our Mission </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                          
+                    </div>
+                </div>
+                  </div>
+            
+        
+        </div>
+    </section>
+    
+    <section  >
+        <div class="container">
+             
+            <div class="row g-pad-bottom">
+                
+                    <h2>Contact Us</h2>
+                 
+                    <p>
+                         <strong> Address: </strong> &nbsp;Krishna Bhumi, Chhatikara Road, Mathura, Uttar Pradesh, India  
+                        <br />
+                        Mathura has a rich history, with archaeological finds dating back to ancient times. It was an important center of art and culture during the Kushan Empire, contributing significantly to the development of Buddhist and Jain art.              
+                    </p>
+                    <form action="{% url "enquiry" %}" method="post">
+                        {% csrf_token %}
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="Phone">Phone No:</label>
+                        <input type="text" id="subject" name="phone" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                   <iframe class="cnt" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14094.446585548768!2d77.67012382280323!3d27.495282151022634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39737180e6ffbb01%3A0x5c1a5a6a3b4e1a60!2sVrindavan%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1624874325957!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                </div>
+            
+        </div>
+    </section>
+    <!--END CONTACT SECTION-->
+
+   
+
+   
+
+{% include "footer.html" %}
